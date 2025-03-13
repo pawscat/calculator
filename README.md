@@ -1,1 +1,1 @@
-# A Simple Calculator with C Sharp
+# A Simple Calculator with C#
