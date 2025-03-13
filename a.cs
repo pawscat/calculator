@@ -1,54 +1,27 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CalculatorConsole
-{
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.Title = "Aplikasi Kalkulator";
+class Calculator 
+{ 
+    static void Main(string[] args) 
+    { 
+        int a = 10;   
+        int b = 6;
 
-            // int a = 10;
-            // int b = 6;
+        // Corrected the string interpolation and added the missing $ sign
+        Console.WriteLine($"Hasil Penambahan: {a} + {b} = {Penambahan(a, b)}"); 
+        Console.WriteLine($"Hasil Pengurangan: {a} - {b} = {Pengurangan(a, b)}"); 
 
-            Console.Write("Inputkan Nilai a = ");
-            int a = int.Parse(Console.ReadLine());
+        Console.WriteLine("\nTekan sembarang key untuk keluar"); 
+        Console.ReadKey(); 
+    } 
 
-            Console.Write("Inputkan Nilai b = ");
-            int b = Convert.ToInt32(Console.ReadLine());
+    static int Penambahan(int a, int b) 
+    { 
+        return a + b; // Tugas 2: Menambahkan fungsi Penambahan 
+    } 
 
-            Console.WriteLine();
-
-            Console.WriteLine("Hasil Penambahan " + a + " + " + b + " = " + Tambah (a,b));
-            Console.WriteLine("Hasil Pengurangan {0} - {1} = {2}", a,b, Kurang (a, b));
-            Console.WriteLine("Hasil Perkalian {0} * {1} = {2}", a, b, Kali (a, b));
-            Console.WriteLine("Hasil Pembagian {0} / {1} = {2}", a, b, Bagi (a, b));
-
-            Console.WriteLine("\nTekan Sembarang untuk keluar");
-            Console.ReadKey();
-        }
-        static int Tambah (int a, int b)
-        {
-            return a + b; 
-        }
-        static int Kurang (int a, int b)
-        {
-            return a - b;
-        }
-        static int Kali (int a, int b)
-        {
-            return a * b;
-        }
-        static int Bagi (int a, int b)
-        // static float Bagi(int a, int b)
-        // static double Bagi(int a, int b)
-        {
-            return a / b;
-            // return a / b(float);
-        }
-    }
+    static int Pengurangan(int a, int b) 
+    { 
+        return a - b; // Tugas 3: Menambahkan fungsi Pengurangan 
+    } 
 }
